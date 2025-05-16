@@ -36,4 +36,4 @@ ZHIJUN, Wu et al. Low-rate DoS attacks, detection, defense, and challenges: A su
 
 **To use this dataset, please use the quote from our paper**
 
-de Lima, A. C., Alchieri, E. A., Bordim, J. L., & Gondim, J. J. (2024, November). An Improved Method for Detecting EDoS Attacks in the Cloud With Hyperparameter Optimization and Metaheuristic Algorithms. In 2024 Twelfth International Symposium on Computing and Networking Workshops (CANDARW) (pp. 43-49). IEEE.
+De Lima, A. C., Alchieri, E. A., Bordim, J. L., & Gondim, J. J. (2024, November). An Improved Method for Detecting EDoS Attacks in the Cloud With Hyperparameter Optimization and Metaheuristic Algorithms. In 2024 Twelfth International Symposium on Computing and Networking Workshops (CANDARW) (pp. 43-49). IEEE.
