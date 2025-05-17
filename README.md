@@ -20,6 +20,22 @@ After this procedure, we performed a careful analysis of the flows to identify i
 
 The next step was to create a new attack category called EDOS in the “attack_cat” feature. In the “label” feature, the label was changed to “1” for EDOS attacks, while the label was “0” for normal flows and other types of attacks (Fuzzers, Analysis, Backdoors, DoS, etc.). Finally, we eliminated all inconsistent and null data, generating a new dataset called EDoS-UNSW-NB15 with 256,890 records.
 
+**Number of attacks**
+
+EDoS - 13659
+DoS - 2479
+Normal - 92998
+Analysis - 2636
+Backdoor - 2287
+Exploits - 44189
+Fuzzers - 24191
+Generic - 58822
+Reconnaissance - 13944
+Shellcode - 1511
+Worms - 174
+###########################
+All - 256890
+
 **Reference:**
 
 MOUSTAFA, Nour; SLAY, Jill. UNSW-NB15: a comprehensive data set for network intrusion detection systems (UNSW-NB15 network data set). In: 2015 military communications and information systems conference (MilCIS). IEEE, 2015. p. 1-6.
