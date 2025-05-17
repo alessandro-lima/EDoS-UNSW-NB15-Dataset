@@ -1,6 +1,6 @@
 # EDoS-UNSW-NB15-Dataset
 
-Over the course of five months, we manually identified records containing original DoS/DDoS attacks, as well as LDoS attacks with signs of Economic Denial of Sustainability (EDoS). This identification was based on the characteristics described by Zhijun et al. (2020) and the UNSW-NB15 report (available at: https://shre.ink/gv3X), taking as a starting point the records originally labeled as "DoS".
+Over the course of five months, we manually identified records containing original DoS/DDoS attacks, as well as LDoS attacks with signs of Economic Denial of Sustainability (EDoS). This identification was based on the characteristics described by Zhijun et al. (2020) and the UNSW-NB15 report (available at: https://research.unsw.edu.au/projects/unsw-nb15-dataset), taking as a starting point the records originally labeled as "DoS".
 
 The attacks found include ICMP Flood, TCP SYN Flood, DNS Flood, UDP Flood and HTTP Flood, which present unique DoS/DDoS characteristics, as well as LDoS attack models with EDoS traits, such as Slowloris, Database API Request, XML External Entities (XXE), BREACH attack, Apache HTTP Server Range Header Memory Exhaustion, among others.
 
