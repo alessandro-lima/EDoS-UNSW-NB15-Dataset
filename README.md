@@ -1,26 +1,20 @@
 # EDoS-UNSW-NB15-Dataset
 
-The UNSW-NB15 dataset, developed by Moustafa and Slay (2015), includes several types of local and cloud-based attacks. There are 9 attack models, namely: Fuzzers, Analysis, Backdoors, DoS, Exploits, Generic, Reconnaissance, Shellcode, and Worms.
+Over the course of five months, we manually identified records containing original DoS/DDoS attacks, as well as LDoS attacks with signs of Economic Denial of Sustainability (EDoS). This identification was based on the characteristics described by Zhijun et al. (2020) and the UNSW-NB15 report (available at: https://shre.ink/gv3X), taking as a starting point the records originally labeled as "DoS".
 
-Over the course of five months, we conducted a study on the UNSW-NB15 dataset, in which we identified that there are attacks on the feature called label in the flows marked as “DoS” that have characteristics of LDoS attacks with EDoS traits, following the study carried out by Zhijun et al. (2020) and based on the documentation provided by the UNSW-NB15 dataset. The attacks found include ICMP Flood, TCP SYN Flood, DNS Flood, UDP Flood and HTTP Flood, which present unique DoS/DDoS characteristics, as well as LDoS attack models with EDoS traits, such as Slowloris, Database API Request, XML External Entities (XXE), BREACH attack, Apache HTTP Server Range Header Memory Exhaustion, among others.
+The attacks found include ICMP Flood, TCP SYN Flood, DNS Flood, UDP Flood and HTTP Flood, which present unique DoS/DDoS characteristics, as well as LDoS attack models with EDoS traits, such as Slowloris, Database API Request, XML External Entities (XXE), BREACH attack, Apache HTTP Server Range Header Memory Exhaustion, among others.
 
-To distinguish between the two categories of attacks, we used the complete UNSW-NB15 dataset, in .csv format, containing 257,673 rows, in order to facilitate the analysis and understanding of the dataset.
+To distinguish between the two categories of attacks (DoS/DDoS or LDoS with EDoS traits), we used the full original UNSW-NB15 dataset in .csv format, containing 257,673 records. This approach allowed for a broader analysis and a better understanding of the dataset as a whole.
 
-Initially, with the help of tool Microsoft Excel, we selected only the records with the "DoS" label and applied advanced filters to isolate flows characteristic of LDoS attacks with EDoS properties, according to the approach described by Zhijun et al. (2020). We must use the features “dpkt” (volume of outgoing packets), “rate” (transmission rate in Mbit/s) and “dur” (duration of the flow in seconds). The criteria adopted were:
+Initially, with the help of tool Microsoft Excel, we selected only the records with the "DoS" label and applied advanced filters to isolate flows characteristic of LDoS attacks with EDoS properties, according to the approach described by Zhijun et al. (2020). We must use the features “dpkt” (volume of outgoing packets), “rate” (transmission rate in Mbit/s) and “dur” (duration of the flow in seconds in dataset original). The criteria adopted were:
 
 1) “dpkt” ≤ 1000 packets/s;
 
 2) “rate" ≤ 0.001 (equivalent to 1000 bits/s).
 
-In the next step, we define the duration of the attack flows based on the work of Fu et al. (2022), using the “dur” feature. The criteria applied were:
+In the next step, we defined the duration of the attack flows based on the work of Fu et al. (2022), using the “dur” functionality. The criteria applied were:
 
-1) Each attack burst has an average duration of ~50 seconds with an inactivity period above 51 seconds, characterizing intermittent behavior.
-
-Within each burst, there are sub-bursts, composed of:
-
-- Periods of ≥ 0.1 seconds and interspersed with ≤ 0.9 seconds;
-
-This way, we generate a sum of 1-second cycles until completing bursts of up to 50 seconds (or the period of inactivity of up to 100 seconds).
+- Attack bursts with an average duration of <50 seconds were selected, where we found flows with small sub-bursts with periods of ≥ 0.1 seconds and interspersed with ≤ 0.9 (sum of 1-second cycles until completing bursts of up to 50 seconds), and at the same time periods of inactivity above ≥ 51 seconds, characterizing intermittent behavior similar to normal flow.
 
 After this procedure, we performed a careful analysis of the flows to identify if there was any inconsistency in the selected criteria. This way, we were able to select only the LDoS flows with EDoS traces.
 
@@ -36,4 +30,15 @@ ZHIJUN, Wu et al. Low-rate DoS attacks, detection, defense, and challenges: A su
 
 **To use this dataset, please use the quote from our paper**
 
-De Lima, A. C., Alchieri, E. A., Bordim, J. L., & Gondim, J. J. (2024, November). An Improved Method for Detecting EDoS Attacks in the Cloud With Hyperparameter Optimization and Metaheuristic Algorithms. In 2024 Twelfth International Symposium on Computing and Networking Workshops (CANDARW) (pp. 43-49). IEEE.
+@INPROCEEDINGS{10817811,
+  author={de Lima, Alessandro Cordeiro and Alchieri, Eduardo A. P. and Bordim, Jacir L. and Gondim, João J. C.},
+  booktitle={2024 Twelfth International Symposium on Computing and Networking Workshops (CANDARW)}, 
+  title={An Improved Method for Detecting EDoS Attacks in the Cloud With Hyperparameter Optimization and Metaheuristic Algorithms}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={43-49},
+  keywords={Cloud computing;Machine learning algorithms;Accuracy;Error analysis;Metaheuristics;Bayes methods;Classification algorithms;Sustainable development;Random forests;Tuning;EDoS;ML;SMOTE-ENN;Cloud Computing},
+  doi={10.1109/CANDARW64572.2024.00016}}
+
+
