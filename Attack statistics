@@ -1,0 +1,15 @@
+Number of attacks in the new dataset (data cleaned and null values ​​removed):
+
+EDoS - 13659
+DoS - 2479
+Normal - 92998
+Analysis - 2636
+Backdoor - 2287
+Exploits - 44189
+Fuzzers - 24191
+Generic - 58822
+Reconnaissance - 13944
+Shellcode - 1511
+Worms - 174
+###########################
+All - 256890
