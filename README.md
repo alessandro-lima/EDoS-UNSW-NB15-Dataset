@@ -20,7 +20,7 @@ After this procedure, we performed a careful analysis of the flows to identify i
 
 The next step was to create a new attack category called EDOS in the “attack_cat” feature. In the “label” feature, the label was changed to “1” for EDOS attacks, while the label was “0” for normal flows and other types of attacks (Fuzzers, Analysis, Backdoors, DoS, etc.). Finally, we eliminated all inconsistent and null data, generating a new dataset called EDoS-UNSW-NB15 with 256,890 records.
 
-**Reference**
+**Reference:**
 
 MOUSTAFA, Nour; SLAY, Jill. UNSW-NB15: a comprehensive data set for network intrusion detection systems (UNSW-NB15 network data set). In: 2015 military communications and information systems conference (MilCIS). IEEE, 2015. p. 1-6.
 
@@ -28,7 +28,7 @@ FU, Yu et al. Low-rate Denial of Service attack detection method based on time-f
 
 ZHIJUN, Wu et al. Low-rate DoS attacks, detection, defense, and challenges: A survey. IEEE access, v. 8, p. 43920-43943, 2020. 
 
-**To use this dataset, please use the quote from our paper**
+**To use this dataset, please use the quote from our paper:**
 
 @INPROCEEDINGS{10817811,
   author={de Lima, Alessandro Cordeiro and Alchieri, Eduardo A. P. and Bordim, Jacir L. and Gondim, João J. C.},
