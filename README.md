@@ -14,7 +14,7 @@ Initially, with the help of tool Microsoft Excel, we selected only the records w
 
 In the next step, we defined the duration of the attack flows based on the work of Fu et al. (2022), using the “dur” functionality. The criteria applied were:
 
-- Attack bursts with an average duration of <50 seconds were selected, where we found flows with small sub-bursts with periods of ≥ 0.1 seconds and interspersed with ≤ 0.9 (sum of 1-second cycles until completing bursts of up to 50 seconds), and at the same time periods of inactivity above ≥ 51 seconds, characterizing intermittent behavior similar to normal flow.
+- Attack bursts with an average duration of <50 seconds were selected, where we found flows with small sub-bursts with periods of ≥ 0.1 seconds and interspersed with ≤ 0.9 (sum of 1-second cycles until completing bursts of up to 50 seconds), and at the same time periods of inactivity above ≥ 51 seconds, characterizing intermittent behavior.
 
 After this procedure, we performed a careful analysis of the flows to identify if there was any inconsistency in the selected criteria. This way, we were able to select only the LDoS flows with EDoS traces.
 
