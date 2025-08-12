@@ -6,15 +6,11 @@ The attacks found include ICMP Flood, TCP SYN Flood, DNS Flood, UDP Flood and HT
 
 To distinguish between the two categories of attacks (DoS/DDoS or LDoS with EDoS traits), we used the full original UNSW-NB15 dataset in .csv format, containing 257,673 records. This approach allowed for a broader analysis and a better understanding of the dataset as a whole.
 
-Initially, with the help of tool Microsoft Excel, we selected only the records with the "DoS" label and applied advanced filters to isolate flows characteristic of LDoS attacks with EDoS properties, according to the approach described by Zhijun et al. (2020). We must use the features “dpkt” (volume of outgoing packets), “rate” (transmission rate in Mbit/s) and “dur” (duration of the flow in seconds in dataset original). The criteria adopted were:
-
-1) “dpkt” ≤ 1000 packets/s;
-
-2) “rate" ≤ 0.001 (equivalent to 1000 bits/s).
+Initially, with the help of tool Microsoft Excel, we selected only the records with the "DoS" label and applied advanced filters to isolate flows characteristic of LDoS attacks with EDoS properties, according to the approach described by Zhijun et al. (2020). We must use the features “dpkt” (volume of outgoing packets), “rate” (transmission rate in Mbit/s) and “dur” (duration of the flow in seconds in dataset original). The criteria adopted were: "rate" ≤ 0.001 (equivalent to 1000 bits/s).
 
 In the next step, we defined the duration of the attack flows based on the work of Fu et al. (2022), using the “dur” functionality. The criteria applied were:
 
-- Attack bursts with an average duration of <50 seconds were selected, where we found flows with small sub-bursts with periods of ≥ 0.1 seconds and interspersed with ≤ 0.9 (sum of 1-second cycles until completing bursts of up to 50 seconds), and at the same time periods of inactivity above ≥ 51 seconds, characterizing intermittent behavior.
+- Attack bursts lasting an average of up to 50 seconds, followed by a period of flow hibernation of up to 100 seconds.
 
 After this procedure, we performed a careful analysis of the flows to identify if there was any inconsistency in the selected criteria. This way, we were able to select only the LDoS flows with EDoS traces.
 
